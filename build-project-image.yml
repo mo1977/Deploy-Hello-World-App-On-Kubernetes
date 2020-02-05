@@ -1,0 +1,17 @@
+---
+- hosts: all
+  tasks:
+  - name: build docker image using war file
+    command: docker build -t poc-devops-image:latest .
+    args:
+      chdir: /opt/docker
+
+  - name: create image tag for image
+    command: docker tag poc-devops-image mo1977/poc-devops-image
+
+  - name: push image to docker hub
+    command: docker push mo1977/poc-devops-image
+
+  - name: remove docker image from ansible server
+    command: docker rmi poc-devops-image:latest mo1977/poc-devops-image
+    ignore_errors: yes
