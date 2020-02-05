@@ -1,6 +1,5 @@
-# Pull base image 
-From tomcat:8-jre8 
+FROM mo1977/modify-tomcat-image
 
-# Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
+MAINTAINER Medrim Bangs
+
 COPY ./webapp.war /usr/local/tomcat/webapps
