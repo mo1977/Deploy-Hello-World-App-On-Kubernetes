@@ -1,6 +1,6 @@
 # maven-project
 
-Deploying maven project on Docker
+Deploying on kubernetes using ansible
 
 Tools Used:
 
@@ -9,3 +9,4 @@ Github --> Code Repository
 Jenkins --> Contineous Integration
 Ansible --> Deployment and Management
 Docker --> Container Runtime
+Kubernetes --> Container Orchestration
